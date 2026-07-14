@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>استيراد Excel</title>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+<style>
+body{
+font-family:Cairo,sans-serif;
+padding:40px;
+background:#f4f7fb;
+}
+
+input{
+margin:20px 0;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td,th{
+border:1px solid #ddd;
+padding:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>رفع ملف Excel</h2>
+
+<input type="file" id="excelFile" accept=".xlsx">
+
+<div id="output"></div>
+
+<script>
+
+document.getElementById('excelFile').addEventListener('change', function(e){
+
+const reader = new FileReader();
+
+reader.onload=function(event){
+
+const data=new Uint8Array(event.target.result);
+
+const workbook=XLSX.read(data,{type:'array'});
+
+const sheet=workbook.Sheets[workbook.SheetNames[0]];
+
+const html=XLSX.utils.sheet_to_html(sheet);
+
+document.getElementById("output").innerHTML=html;
+
+}
+
+reader.readAsArrayBuffer(e.target.files[0]);
+
+});
+
+</script>
+
+</body>
+</html>
