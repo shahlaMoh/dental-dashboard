@@ -1,9 +1,15 @@
-fetch("data.json")
-.then(response => response.json())
-.then(data => {
-    document.getElementById("dashboard").innerHTML = `
-        <h2>Dashboard Connected Successfully</h2>
-        <p>Total Patients: ${data.totalPatients}</p>
-        <p>Total Revenue: ${data.totalRevenue} SAR</p>
-    `;
+const ctx = document.getElementById('chart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['الشمال','الشرق','الإسكان','الأفق','الزرقاء'],
+        datasets: [{
+            label: 'الدخل',
+            data: [0,0,0,0,0]
+        }]
+    },
+    options: {
+        responsive: true
+    }
 });
