@@ -1,5 +1,19 @@
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f5f7fa;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+}
+
+h1{
+    background:#0f766e;
+    color:white;
+    padding:20px;
+    text-align:center;
+    margin:0;
+}
+
+#dashboard{
+    padding:30px;
+    font-size:22px;
+    text-align:center;
 }
