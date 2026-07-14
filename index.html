@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Dashboard</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+}
+
+header{
+    background:#0f766e;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h2{
+    color:#0f766e;
+    margin:0;
+}
+
+.card p{
+    font-size:35px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Dental Dashboard</h1>
+<p>Medical Group</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Patients</h2>
+<p>0</p>
+</div>
+
+<div class="card">
+<h2>Doctors</h2>
+<p>0</p>
+</div>
+
+<div class="card">
+<h2>Revenue</h2>
+<p>0 SAR</p>
+</div>
+
+<div class="card">
+<h2>Insurance</h2>
+<p>0</p>
+</div>
+
+</div>
+
+</body>
+</html>
